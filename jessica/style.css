@@ -1,0 +1,147 @@
+/* Definindo variáveis no :root */
+:root {
+    --cor-fundo: #da94ae;
+    --cor-principal: #e91e63; /* Cor de destaque (rosa) */
+    --cor-texto: #333;
+    --cor-footer: #2c2c2c;
+    --cor-link: #007bff;
+    --cor-hover-link: #0056b3;
+}
+
+/* Resetando a margem e o padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo do site */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+/* Estilos para o header */
+header {
+    background-color: var(--cor-principal);
+    color: rgb(202, 136, 136);
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+header nav ul li a:hover {
+    color: var(--cor-hover-link);
+}
+
+/* Estilos para o Main */
+main {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+/* Estilo para as seções de produtos */
+.produtos-lista {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.produto {
+    text-align: center;
+    width: 200px;
+}
+
+.produto img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Estilos para o botão de promoções */
+button {
+    background-color: var(--cor-principal);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #d81b60;
+}
+
+/* Estilo das dicas */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: var(--cor-link);
+}
+
+ul li a:hover {
+    color: var(--cor-hover-link);
+}
+
+/* Estilo do footer */
+footer {
+    background-color: var(--cor-footer);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+footer .container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    .produtos-lista {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
